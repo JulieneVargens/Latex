@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=3.0cm,right=2cm,top=3.0cm,bottom=2cm]{geometry}
+\author{Juliene Vargens}
+\begin{document}
+\begin{enumerate}
+\item Resolver a integral
+$\sum(R)=2\displaystyle{\int\limits_{R}^{\infty}\frac{r \rho(r) dr}{\sqrt{r^2-R^2}}}$, sendo 
+$\rho(r)=\frac{\sigma^2_v}{2\pi G r^2}$   .
+\end{enumerate}
+\textbf{Resolução:}\\
+\\
+Substituindo $\rho$ na integral, tem-se:
+\begin{equation}
+\sum(R)=2\displaystyle{\int\limits_{R}^{\infty}\frac{r \sigma^2_v dr}{2 \pi G r^2\sqrt{r^2-R^2}}}
+\end{equation}
+Simplificando o numerador com o denominador e colocando as constantes para fora da integral,tem-se:
+\begin{equation}
+\sum(R)=\frac{\sigma^2_v}{\pi G}\displaystyle{\int\limits_{R}^{\infty}\frac{dr}{r\sqrt{r^2-R^2}}}
+\end{equation}
+Resolvendo a integral indefinida $\displaystyle{\int\frac{dr}{r\sqrt{r^2-R^2}}}$ pelo método de substituição, fazendo:
+\begin{equation}
+u=r^2 \  \rightarrow \ du=2rdr
+\end{equation}
+
+\begin{equation}
+\int\frac{du}{2u\sqrt{u-R^2}}
+\end{equation}
+Fazendo:\\
+$v=\sqrt{u-R^2}\\
+u=v^2+R^2\rightarrow du=2vdv$
+Substituindo na integral (4), tem-se:
+\begin{equation}
+\int\frac{2vdv}{2(v^2+R^2)\sqrt{v^2+R^2-R^2}}=\int\frac{dv}{\sqrt{v^2+R^2}}
+\end{equation}
+
+Fazendo mais uma subtituição:\
+$v=Rw\longrightarrow dv=Rdw$, fica-se:
+\begin{equation}
+\int\frac{Rdw}{R^2w^2+R^2}=\int\frac{Rdw}{R^2(w+1)}=\frac{1}{R}\int\frac{dw}{w+1}
+\end{equation}
+A integral (6) será:
+\begin{equation}
+\frac{1}{R}\int\frac{dw}{w+1}=\frac{1}{R}\arctan(w)
+\end{equation}
+Temos que $w=\frac{v}{R}$, em que $v=\sqrt{u-R^2}$,onde por sua vez $u=r^2$, Logo:
+\begin{equation}
+w=\frac{\sqrt{r^2-R^2}}{R}
+\end{equation}
+Substituindo (8) em (7):
+\begin{equation}
+\frac{1}{R}\arctan(w)=\frac{1}{R}\arctan(\frac{\sqrt{r^2-R^2}}{R})
+\end{equation}
+Agora, voltando a equação (2), onde se deverá multiplicar a equação (9) pelos termos contantes e substituir os limites de integração que vai de R à $\infty$:
+\begin{equation}
+\sum(R)=\frac{\sigma^2_v}{\pi GR}\arctan(\frac{\sqrt{r^2-R^2}}{R})]\limits_{R}^{\infty}
+\end{equation}
+A equação (10) será:
+\begin{equation}
+\frac{\sigma^2_v}{\pi GR}(\arctan(\frac{\sqrt{\infty-R^2}}{R}-\frac{\sqrt{R^2-R^2}}{R})
+\end{equation}
+ 
+\begin{equation}
+\frac{\sigma^2_v}{\pi GR}(\arctan(\frac{\sqrt{\infty}-\frac{\sqrt{0})
+\end{equation}
+
+
+\end{document}
