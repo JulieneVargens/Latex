@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=3.0cm,right=2cm,top=3.0cm,bottom=2cm]{geometry}
+\author{Juliene Vargens}
+\begin{document}
+\begin{center}
+\textbf{Cálculo da deflexão da luz por uma massa pontual }\\
+\end{center}
+
+\begin{enumerate}
+
+\paragraph{}
+\item Dada a relação
+$\phi(b,z)=\frac{-GM}{\sqrt{b^2+z^2}}$ , calcular 
+$\bigtriangledown_{\perp}\phi(b,z)$.
+
+\paragraph{}\textbf{Resolução:}
+\begin{equation}
+\bigtriangledown_{\perp}\phi(b,z)=\frac{\partial\phi}{\partial b}={\frac{GMb}{(b^2+z^2)^\frac{3}{2}}}
+\end{equation}
+
+\item Encontre $\hat{\alpha}= \frac{2}{c^2}\displaystyle{\int\limits_{-\infty}^{\infty}\mid\bigtriangledown_{\perp}\phi\mid dz =\frac{4GM}{c^2b}}$
+\subparagraph{}\textbf{Resolução:}
+
+\end{enumerate}
+Substituindo a equação (1) em $\hat{\alpha}$, tem-se:
+\begin{equation}
+\hat{\alpha}= \frac{2}{c^2}{\displaystyle{\int\limits_{-\infty}^{\infty}}\mid\\ \frac{GMb}{(b^2+z^2)^\frac{3}{2}}\ \mid dz}= \frac{2}{c^2}{\displaystyle{\int\limits_{-\infty}^{\infty}} \frac{GMb}{(b^2+z^2)^\frac{3}{2}} dz}
+\end{equation}
+Resolvendo a integral (2) pelo método de subtituição trigonométrica ,fazendo:
+\begin{equation}
+z=b\tan\theta\ e \ dz=b\sec^2\theta
+\end{equation}
+Temos para os limites de integração que :
+$z\rightarrow\infty\ quando\ \theta=\frac{\pi}{2}\ e \ z\rightarrow-\infty\ quando\ \theta=-\frac{\pi}{2}$\\
+\paragraph{} Então, substituindo os novos limites de integração e (3) na equação (2), temos:
+\begin{equation}
+\frac{2}{c^2}{\displaystyle{\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}}\frac{GMb}{(b^2+(b\tan\theta)^2)^\frac{3}{2}}b\sec^2\theta d\theta}=\frac{2}{c^2}{\displaystyle{\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}}\frac{GMb^2\sec^2\theta d\theta}{(b^2(1+\tan^2\theta))^\frac{3}{2}}}
+\end{equation}
+{Utilizando a relação $1+\tan^2\theta=\sec^2\theta$}, tem-se que:
+\begin{equation}
+\frac{2}{c^2}{\displaystyle{\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}}\frac{GMb^2\sec^2\theta d\theta}{(b^2(\sec^2\theta))^\frac{3}{2}}}= \frac{2}{c^2}{\displaystyle{\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}}\frac{GMb^2\sec^2\theta d\theta}{b^3\sec^3\theta}}
+\end{equation}
+Simplicando o numerador com o denominador e colocando os termos constantes para fora da integral, ficamos com:
+\begin{equation}
+ \frac{2GM}{c^2b}{\displaystyle{\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}}\frac{d\theta}{\sec\theta}}=\frac{2GM}{c^2b}{\displaystyle{\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}}\cos\theta\ d\theta}=\frac{2GM}{c^2b}[\\sen\theta]\limits_{-\frac{\pi}{2}}^{\frac{\ \pi}{\ 2}}\\
+= \frac{2GM}{c^2b}[1-(-1)]
+\end{equation}
+
+Logo:
+
+\begin{equation}
+\hat{\alpha}= \frac{4GM}{c^2b}
+\end{equation}
+
+\begin{flushright}
+C.Q.D
+\end{flushright}
+\paragraph{} $\hat{\alpha}$ representa o ângulo desvio da luz produzido pelo campo gravitacional de uma massa pontual, conforme mostra a figura abaixo: 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics{mp}
+    \caption{representação do desvio da luz por uma massa pontual}
+    \label{figRotulo}
+    \end{figure}
+
+\end{document}
