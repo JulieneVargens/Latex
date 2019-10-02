@@ -1,72 +1,138 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt]{beamer}
+\setbeamercovered{transparent}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[portuguese]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage[left=3.0cm,right=2cm,top=3.0cm,bottom=2cm]{geometry}
-\author{Juliene Vargens}
+\usepackage{graphicx,wrapfig,lipsum}
+\usetheme{Antibes}
 \begin{document}
-\begin{enumerate}
-\item Resolver a integral
-$\sum(R)=2\displaystyle{\int\limits_{R}^{\infty}\frac{r \rho(r) dr}{\sqrt{r^2-R^2}}}$, sendo 
-$\rho(r)=\frac{\sigma^2_v}{2\pi G r^2}$   .
-\end{enumerate}
-\textbf{Resolução:}\\
-\\
-Substituindo $\rho$ na integral, tem-se:
-\begin{equation}
-\sum(R)=2\displaystyle{\int\limits_{R}^{\infty}\frac{r \sigma^2_v dr}{2 \pi G r^2\sqrt{r^2-R^2}}}
-\end{equation}
-Simplificando o numerador com o denominador e colocando as constantes para fora da integral,tem-se:
-\begin{equation}
-\sum(R)=\frac{\sigma^2_v}{\pi G}\displaystyle{\int\limits_{R}^{\infty}\frac{dr}{r\sqrt{r^2-R^2}}}
-\end{equation}
-Resolvendo a integral indefinida $\displaystyle{\int\frac{dr}{r\sqrt{r^2-R^2}}}$ pelo método de substituição, fazendo:
-\begin{equation}
-u=r^2 \  \rightarrow \ du=2rdr
-\end{equation}
+	\author{Juliene Vargens Ferreira\\Orientador:Armando Bernui}
+	
+	\title{Lenteamento Gravitacional como ferramenta cosmológica}
+	%\logo{\includegraphics[scale=0.05]{on.jpg}}
+	%	\documentclass{beamer}
+		
+	
+	%\subtitle{}
+	%\logo{\includegraphics[scale=0.05]{on.jpg}}
+	\institute{Observatório Nacional}
+	%\date{}
+	%\subject{}
+	\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+			
+\begin{frame}
+	\frametitle{Breve histórico}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}
+			\item Antes de Einstein: As massas desviam os fótons, tratadas como massas pontuais.
+			\item 1915 a relatividade geral de Einstein preveu para o ângulo de deflexão  um fator de 2 comparado ao valor clássico. Confirmado em 1919 por Eddington e outros durante o eclipse solar.
+		\end{itemize}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[scale=0.5]{eclipse.jpg}
+			\caption{foto obtida por Eddingston e sua equipe}
+			\label{figura1}
+			\centering
+		\end{figure}
+	\end{columns}
+\end{frame}
 
-\begin{equation}
-\int\frac{du}{2u\sqrt{u-R^2}}
-\end{equation}
-Fazendo:\\
-$v=\sqrt{u-R^2}\\
-u=v^2+R^2\rightarrow du=2vdv$
-Substituindo na integral (4), tem-se:
-\begin{equation}
-\int\frac{2vdv}{2(v^2+R^2)\sqrt{v^2+R^2-R^2}}=\int\frac{dv}{\sqrt{v^2+R^2}}
-\end{equation}
+\begin{frame}
+	\frametitle{Como ocorre o efeito de lenteamento gravitacional(LG)}
+	\begin{columns}
+		\column{0.4\textwidth}
+		Os raios de luz(fotóns) ao passarem  na vizinhança de um campo gravitacional   mudam sua trajetória: o raio luminoso  sofre um desvio!
+		\column{0.6\textwidth}
+		\begin{figure}
+			\includegraphics[scale=0.45]{ilustracao2.png}
+			\caption{ilustração dos raios de luz sendo desviados por um objeto maciço}
+			\label{figura2}
+			\centering
+		\end{figure}
+	\end{columns}
+\end{frame}
 
-Fazendo mais uma subtituição:\
-$v=Rw\longrightarrow dv=Rdw$, fica-se:
-\begin{equation}
-\int\frac{Rdw}{R^2w^2+R^2}=\int\frac{Rdw}{R^2(w+1)}=\frac{1}{R}\int\frac{dw}{w+1}
-\end{equation}
-A integral (6) será:
-\begin{equation}
-\frac{1}{R}\int\frac{dw}{w+1}=\frac{1}{R}\arctan(w)
-\end{equation}
-Temos que $w=\frac{v}{R}$, em que $v=\sqrt{u-R^2}$,onde por sua vez $u=r^2$, Logo:
-\begin{equation}
-w=\frac{\sqrt{r^2-R^2}}{R}
-\end{equation}
-Substituindo (8) em (7):
-\begin{equation}
-\frac{1}{R}\arctan(w)=\frac{1}{R}\arctan(\frac{\sqrt{r^2-R^2}}{R})
-\end{equation}
-Agora, voltando a equação (2), onde se deverá multiplicar a equação (9) pelos termos contantes e substituir os limites de integração que vai de R à $\infty$:
-\begin{equation}
-\sum(R)=\frac{\sigma^2_v}{\pi GR}\arctan(\frac{\sqrt{r^2-R^2}}{R})]\limits_{R}^{\infty}
-\end{equation}
-A equação (10) será:
-\begin{equation}
-\frac{\sigma^2_v}{\pi GR}(\arctan(\frac{\sqrt{\infty-R^2}}{R}-\frac{\sqrt{R^2-R^2}}{R})
-\end{equation}
- 
-\begin{equation}
-\frac{\sigma^2_v}{\pi GR}(\arctan(\frac{\sqrt{\infty}-\frac{\sqrt{0})
-\end{equation}
+\begin{frame}{Como ocorre o efeito de lenteamento gravitacional(LG)}
+	\begin{figure}
+		\includegraphics[scale=0.6]{ilustracao1.png}
+		\centering
+		
+	\end{figure}
+
+\end{frame}
+\begin{frame}{Arcos no aglomerado de galáxia}
+	\begin{figure}
+		\includegraphics[scale=0.5]{ilustracao3.png}
+		\centering
+		\caption{Abell 1689}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}{Motivação}
+oi
+\end{frame}
+\begin{frame}{Motivação}
+ Promissor levantamentos de dados 
+\end{frame}
+\begin{frame}{Desvio da luz:ângulo de deflexão}
+	\uncover<1->{Para um campo gravitacional fraco, a métrica será uma pequena pertubação na métrica de Minkowski,\\
+	$$ds^2=(1+\dfrac{2\phi}{c^2})c^{2}dt^2-(1-\dfrac{2\phi}{c^2})(\vec{x})^{2}$$}\\
+	\uncover<2->{Uma das formas para obter o ângulo de deflexão é pelo \alert{princípio de Fermat}:O tempo de viagem da luz $T=\int\dfrac{n}{c}dl$ é estacionário,\\
+$$\delta(T)=0=\int_{A}^{B}n(\vec{x}(l))dl$$}\\
+	\uncover<3->{Geodésica nula(ds=0): $c^{'}=\dfrac{|d\vec{x}|}{dt}\approx c(1+\frac{2\phi}{c^2})$\\
+	$$\framebox[4cm]{n=\dfrac{c}{c^{'}}\approx 1-\dfrac{2\phi}{c^2}}$$}
+\end{frame}
+\begin{frame}{Desvio da luz: ângulo de deflexão}
+	Integrando a equação de Euler-Lagrange ao longo do caminho da luz se obtem,\\
+	$$ \hat{\vec{\alpha}}=\dfrac{2}{c^2}\displaystyle{\int_{-\infty}^{+\infty}\nabla_{\perp}\phi dl}$$\\
+Partícula de massa M: |$\hat{\vec{\alpha}}|=\dfrac{4GM}{c^{2}b}$\\
+\begin{figure}
+\includegraphics[scale=0.55]{ilustracao6.png}
+\centering
+\caption{Desvio da luz por uma massa pontual}
+\end{figure}
+
+\end{frame}
+\begin{frame}{Ângulo de deflexão}
+	\uncover<1->{O ângulo de deflexão depende linearmente da da massa M. Isso garante que os ângulos de deflexão de um conjunto de lentes possam ser sobrepostos linearmente.\\
+		$$ \hat{\vec{\alpha}}(\vec{\xi})=\sum_{i}^{}\hat{\vec{\alpha}}(\vec{\xi}-\vec{\xi_{i}})= \dfrac{4G}{c^2}\sum_{i}^{}M_{i}\dfrac{\vec{\xi}-\vec{\xi_{i}}}{|\vec{\xi}-\vec{\xi_{i}}|^{2}} $$\\}
+	\uncover<2->{Com a transição para densidade contínua,\\
+	$$ M_{i}(\vec{\xi_{i}},z)\rightarrow \displaystyle{\int d^2\xi^{'}} \displaystyle{\int dz^{'}\rho(\vec{\xi^{'}},z^')} $$\\}
+	\uncover<3->{Onde se tem que $\Sigma(\vec{\xi^{'}})=\displaystyle{\int dz^{'}\rho(\vec{\xi^{'}},z^')}$ é a densidade superficial bidimensional.Assim, $$\hat{\vec{\alpha}}(\vec{\xi})=\dfrac{4G}{c^2}\displaystyle{\int \dfrac{\vec{\xi}-\vec{\xi_{i}}}{|\vec{\xi}-\vec{\xi_{i}}|^{2}} \Sigma(\vec{\xi^{'}}) } $$}
+	
+ \end{frame}
+\begin{frame}{Equação da lente}
+	content...
+\end{frame}
+\begin{frame}
+	\frametitle{Equação da lente}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\includegraphics[scale=0.5]{eql.png}
+		\caption{foto obtida por Eddingston e sua equipe}
+		\label{figura1}
+		\centering
+		\column{0.5\textwidth}
+			$$\vec{\eta}=\frac{D_{s}}{D_{d}}\vec{\xi}-D_{ds}\hat{\vec{\alpha}}$$\\
+			Introduzindo coordenadas ângulares,\\
+			$$\vec{\eta}=D_{s}\vec{\beta}\ \ \ \ \ \vec{\xi}=D_{d}\vec{\theta}$$\\
+			Assim,\\
+			$$\vec{\beta}=\vec{\theta}-\vec{\alpha}\ \ \ \ \ \ \ \; \ \vec{\alpha}=\dfrac{D_{ds}}{D_{s}}\hat{\vec{\alpha}}(D_{d)\vec{\theta}$$\\
+			sjhajdhkj\\
+	\end{columns}
+\end{frame}
 
 
+\begin{frame}
+	oi
+\end{frame}
 \end{document}
